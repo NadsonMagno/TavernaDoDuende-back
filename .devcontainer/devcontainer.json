@@ -1,0 +1,21 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Tabacaria Backend",
+  "image": "mcr.microsoft.com/devcontainers/java:25",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "25",
+      "installMaven": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr"
+      ]
+    }
+  },
+  "postCreateCommand": "java -version"
+}
