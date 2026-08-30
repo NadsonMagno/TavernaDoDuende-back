@@ -1,11 +1,13 @@
-// .devcontainer/devcontainer.json
 {
-  "name": "Tabacaria Backend",
+  "name": "Taverna do Duende Backend",
   "image": "mcr.microsoft.com/devcontainers/java:25",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
       "version": "25",
       "installMaven": true
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": false
     }
   },
   "customizations": {
@@ -17,5 +19,5 @@
       ]
     }
   },
-  "postCreateCommand": "java -version"
+  "postCreateCommand": "java -version && docker --version"
 }
